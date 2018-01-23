@@ -16,7 +16,12 @@
   <div class="color blue" id="blue"></div>
 </div>
 <script>
-
+  $("#green").mouseover(function(){
+    $("#texte").css("color", "green");
+  }).mouseout(function(){
+    $("#texte").css("color", "black");
+  })
+  
 </script>
 </body>
 </html>
