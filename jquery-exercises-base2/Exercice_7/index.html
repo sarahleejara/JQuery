@@ -22,9 +22,9 @@
 				<li><span class="vert">AJAX</span> ;</li>
 				<li>Plugins ;</li>
 				<li>Utilitaires (version du <a href="https://fr.wikipedia.org/wiki/Navigateur_web">navigateur web</a>,...).</li>
-			</ul>	
+			</ul>
 		</div>
-		
+
 		<div id="modifications">
 			<h2>Modifications de l'article</h2>
 			<ol id="instructions">
@@ -37,30 +37,43 @@
 				<li>Cliquer ici pour ajouter "Chapitre 1 :" devant le 1er titre h2<br>et "Chapitre 2 :" devant le 2ème titre h2</li>
 			</ol>
 		</div>
-		
+
 		<script type="text/javascript" src="jquery.js"></script>
 		<script>
+
+			var basecolor = $('#contenu p').css('color');
+
 			$(document).ready(function(){
+
 				/* agrandir la police de caractères (120%) */
-				
-				
+
+				$("#instructions li").eq(0).click(function(){
+					$("body").css("font-size", "120%");
+				})
+
 				/* diminuer la police de caractères (80%) */
-		
-				
+
+				$("#instructions li").eq(1).click(function(){
+					$("body").css("font-size", "80%");
+				})
+
 				/* mettre en gras ou remettre en normal les mots en vert */
 
-				
+				$("#instructions li").eq(2).click(function(){
+					$(".vert").toggleClass("bold");
+				})
+
 				/* souligner ou remettre en normal les mots en rouge */
-			
-				
+
+
 				/* remplacer le logo par une autre image au survol */
-				
-				
+
+
 				/* Afficher l'URL des liens dans une infobulle lors du survol des liens */
-				
+
 				/* ajouter "Chapitre 1 :" devant le 1er titre h2<br>et "Chapitre 2 :" devant le 2ème titre h2 */
-				
+
 			});
 		</script>
 	</body>
-</html>	
+</html>

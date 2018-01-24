@@ -16,12 +16,21 @@
   <div class="color blue" id="blue"></div>
 </div>
 <script>
-  $("#green").mouseover(function(){
-    $("#texte").css("color", "green");
-  }).mouseout(function(){
-    $("#texte").css("color", "black");
-  })
-  
+
+  // $("#green").mouseover(function(){
+  //   $("#texte").css("color", "green");
+  // }).mouseout(function(){
+  //   $("#texte").css("color", "black");
+  // })
+
+// THIS CODE IS BETTER, IN A SENCE THAT IF THE COLORS CHAGE OR IF WE ADD COLORS THE CODE WON'T CHANGE UNLIKE THE CODE I MADE ON TOP WHICH IS CORRECT BUT NOT VERY USEFUL BECAUSE CHANGES HAVE TO BE MADE ON THE CODE.
+
+  let save = $('#texte p').css('color');
+  $('div.color').on('mouseover',function(e) {
+    $('#texte p').css( 'color', $(this).css( "background-color" ) );
+  }).on('mouseout',function(e) {
+    $('#texte p').css( 'color', save );
+  });
 </script>
 </body>
 </html>
