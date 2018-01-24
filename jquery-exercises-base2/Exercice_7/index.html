@@ -60,20 +60,33 @@
 				/* mettre en gras ou remettre en normal les mots en vert */
 
 				$("#instructions li").eq(2).click(function(){
-					$(".vert").toggleClass("bold");
+					$(".vert").toggleClass("gras");
 				})
 
 				/* souligner ou remettre en normal les mots en rouge */
 
+				$("#instructions li").eq(3).click(function(){
+					$(".rouge").toggleClass("underline");
+				})
 
 				/* remplacer le logo par une autre image au survol */
 
+				$("#instructions li").eq(4).hover(function(){
+					$("img").attr("src", "koala.jpg");
+				}, function(){
+					$("img").attr("src", "jquery-logo.png");
+				})
 
 				/* Afficher l'URL des liens dans une infobulle lors du survol des liens */
 
 				/* ajouter "Chapitre 1 :" devant le 1er titre h2<br>et "Chapitre 2 :" devant le 2ème titre h2 */
 
-			});
+				$("#instructions li").eq(6).click(function(){
+					$("h2").eq(0).prepend("Chapitre 1: ");
+					$("h2").eq(1).prepend("Chapitre 2: ");
+					})
+				});
+
 		</script>
 	</body>
 </html>
